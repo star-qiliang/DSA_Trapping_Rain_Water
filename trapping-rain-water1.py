@@ -17,7 +17,7 @@ class Solution:
                     cur_area = (cur_h-cur_h_min)*(j-i-1)
                     area+=cur_area
                     cur_h_min = cur_h
-                    break
+                    break # stop for now
                 else: # cur_h>=h:  # 连根拔
                     stack.pop()
                     cur_area = (h-cur_h_min)*(j-i-1)
@@ -27,7 +27,4 @@ class Solution:
             stack.append((cur_h, j))
 
         return area
-
-
-
 
